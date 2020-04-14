@@ -1,0 +1,12 @@
+	<view class="task-form-wrap">
+		<van-cell-group>
+			<van-field disabled value="{{ task.taskName }}" label="任务名称" placeholder="请输入任务名称" border="{{ true }}" bind:change="setTaskName" />
+			<van-field value="{{ task.taskDesc }}" label="描述" placeholder="请输入任务描述" border="{{ true }}" bind:change="setTaskDesc" />
+      <view class="task-switch">
+      <text class="task-active">是否有效</text>
+       <van-switch checked="{{ task.isActive }}" size="24px" bind:change="onChange" />
+      </view>
+     
+		</van-cell-group>
+		<button class="mobile-btn" type="primary" size="default" bindtap="modifyTaskHander"> 修改任务 </button>
+	</view>

@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+	<view wx:if="{{isLogin}}">
+		<van-row>
+			<van-col class="wel-header" offset="12" span="12">欢迎您：{{userName}} <text bindtap="logoutFn" class="logout">退出</text></van-col>
+		</van-row>
+		<view class="do-task-wrap">
+			<view class="select-task-tit">选择任务：</view>
+			<view class="radio-list">
+						<view wx:if="{{tasks.length == 0}}" class="add-task-tip">
+				你还没有任务请到任务页面添加任务！！！
+			</view>
+				<van-radio-group value="{{ selectTaskId }}" bind:change="onChangeTaskId">
+					<view class="radio-item" wx:for="{{tasks}}" wx:key="_id" span="12">
+						<van-radio name="{{item.taskName}}">{{item.taskName}}
+						</van-radio>
+					</view>
+				</van-radio-group>
+				<view class="sign-btn">
+					<button class="sign-in-btn" type="primary" bindtap="signInFn"> 签到 </button>
+					<button class="signOut-btn" bindtap="signOutFn"> 签退 </button>
+				</view>
+
+			</view>
+
+		</view>
+		<view class="records-list-wrap">
+			<view class="task-list">
+				<view class="list-title">今日已做/已开始:</view>
+				<view class="task-item" wx:for="{{records}}" wx:key="_id">
+					<van-row>
+						<van-col span="6">序号:</van-col>
+						<van-col span="18">{{index + 1}}</van-col>
+					</van-row>
+					<view class="h-10"></view>
+					<van-row class="task-name-row">
+						<van-col span="6">任务名称:</van-col>
+						<van-col span="18">
+							{{item.taskName}}</van-col>
+					</van-row>
+					<view class="h-10"></view>
+					<van-row>
+						<van-col span="6">签到时间:</van-col>
+						<van-col span="18">{{item.startTime}}</van-col>
+					</van-row>
+					<view class="h-10"></view>
+					<view class="h-10"></view>
+					<van-row>
+						<van-col span="6">签退时间:</van-col>
+						<van-col span="18">{{item.endTime}}</van-col>
+					</van-row>
+					<view class="h-10"></view>
+					<van-row>
+						<van-col span="6">时长:</van-col>
+						<van-col span="18">{{item.duration}} 分钟</van-col>
+					</van-row>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<view wx:else>
+		<view class="login-wrap">
+			<button type="primary" bindtap="goLogin"> 登录 </button>
+			<button class="register" bindtap="goRegister"> 注册 </button>
+		</view>
+	</view>
+</view>

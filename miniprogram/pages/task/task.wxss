@@ -1,0 +1,22 @@
+/* pages/task/task.wxss */
+.add-btn{
+  margin:40rpx 0;
+}
+.task-item{
+  border-bottom: 2rpx solid #ddd;
+  padding:30rpx 20rpx;
+}
+.task-name-row{
+  color:red;
+}
+.no-active-task-name-row{
+  color:#999ddd;
+}
+.table-wrap{
+  padding-bottom:60rpx;
+}
+.list-title{
+  font-size:36rpx;
+  padding:10rpx;
+  border-bottom:2rpx solid #eeeeee;
+}

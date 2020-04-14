@@ -1,0 +1,58 @@
+<view class="task-wrap">
+	<view class="task-form-wrap">
+		<van-cell-group>
+			<van-field value="{{ taskName }}" label="任务名称" placeholder="请输入任务名称" border="{{ true }}" bind:change="setTaskName" />
+			<van-field value="{{ taskDesc }}" label="描述" placeholder="请输入任务描述" border="{{ true }}" bind:change="setTaskDesc" />
+		</van-cell-group>
+		<button class="add-btn" type="primary" size="default" bindtap="addTaskHander"> 添加任务 </button>
+	</view>
+  <!-- 当前任务列表 -->
+	<view class="table-wrap">
+  <view class="list-title">当前有效任务列表:</view>
+		<view class="task-list">
+			<view class="task-item" wx:for="{{activeTasks}}" wx:key="taskName">
+				<van-row>
+					<van-col span="6">序号:</van-col>
+					<van-col span="18">{{index + 1}}</van-col>
+				</van-row>
+        <view class="h-10"></view>
+				<van-row class="task-name-row">
+					<van-col span="6">任务名称:</van-col>
+					<van-col span="18"> 
+          <navigator url="/pages/taskModify/taskModify?userId={{userId}}&taskName={{item.taskName}}">{{item.taskName}}</navigator></van-col>
+				</van-row>
+        <view class="h-10"></view>
+				<van-row>
+					<van-col span="6">任务描述:</van-col>
+					<van-col span="18">{{item.taskDesc}}</van-col>
+				</van-row>
+			</view>
+		</view>
+	</view>
+  <!-- 无效任务列表 -->
+  <view wx:if="{{noActiveTasks.length>0}}">
+    	<view class="table-wrap">
+      <view class="list-title">无效任务列表:</view>
+		<view class="task-list">
+			<view class="task-item" wx:for="{{noActiveTasks}}" wx:key="taskName">
+				<van-row>
+					<van-col span="6">序号:</van-col>
+					<van-col span="18">{{index + 1}}</van-col>
+				</van-row>
+        <view class="h-10"></view>
+				<van-row class="no-active-task-name-row">
+					<van-col span="6">任务名称:</van-col>
+					<van-col span="18"> <navigator url="/pages/taskModify/taskModify?userId={{userId}}&taskName={{item.taskName}}">{{item.taskName}}</navigator></van-col>
+				</van-row>
+        <view class="h-10"></view>
+				<van-row>
+					<van-col span="6">任务描述:</van-col>
+					<van-col span="18">{{item.taskDesc}}</van-col>
+				</van-row>
+			</view>
+		</view>
+	</view>
+  
+  </view>
+
+</view>

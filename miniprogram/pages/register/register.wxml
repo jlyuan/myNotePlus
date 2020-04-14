@@ -1,0 +1,27 @@
+<view class="register-wrap">
+<van-cell-group>
+  <van-field
+    value="{{ name }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    border="{{ true }}"
+    bind:change="setUserName"
+  />
+    <van-field
+    value="{{ passwd }}"
+    label="密码"
+    type="password"
+    placeholder="请输入密码"
+    border="{{ true }}"
+    bind:change="setUserPasswd"
+  />
+      <van-field
+    value="{{ mobile }}"
+    label="手机"
+    placeholder="请输入手机号码"
+    border="{{ true }}"
+    bind:change="setUserMobile"
+  />
+</van-cell-group>
+<button class="register-btn" type="primary" size="default" bindtap="registerHander"> 注册 </button>
+</view>

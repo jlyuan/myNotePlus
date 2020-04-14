@@ -1,0 +1,51 @@
+/* pages/count/count.wxss */
+.radio-item{
+  display:inline-block;
+  width:46%;
+  padding:10rpx 0 10rpx 20rpx;
+}
+.time-to{
+padding: 0 40rpx;
+}
+.time-text{
+  padding: 0 30rpx;
+  }
+  .select-task-tit{
+    padding:20rpx 0 10rpx 10rpx;
+    font-size:32rpx;
+  }
+  .count-title{
+    padding:20rpx 0 10rpx 10rpx;
+    font-size:36rpx;
+    border-bottom:2rpx solid #ddd;
+  }
+  .count-title text{
+    color:red;
+  }
+  .time-wrap van-icon{
+    transform: translate(2rpx,8rpx);
+  }
+  .count-btn-wrap{
+    margin:40rpx auto;
+  }
+  .task-th{
+    border-top:2rpx solid #ddd;
+    border-bottom:2rpx solid #ddd;
+    font-size:30rpx;
+    padding:12rpx 10rpx;
+  }
+  .show-list .task-item{
+    border-bottom:2rpx solid #ddd;
+    font-size:30rpx;
+    padding:12rpx 10rpx;
+  }
+  .total-wrap{
+    padding:0 0 20rpx 10rpx;
+  }
+  .total-wrap view{
+    padding:6rpx;
+  }
+  .canvas {
+    width: 98%;
+    height: 500rpx;
+  }

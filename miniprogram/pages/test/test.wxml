@@ -1,0 +1,7 @@
+<!--miniprogram/pages/test/test.wxml-->
+<view>
+ 
+<view>test</view>
+<canvas class="canvas" canvas-id="lineGraph1"></canvas>
+ 
+</view>

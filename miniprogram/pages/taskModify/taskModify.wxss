@@ -1,0 +1,15 @@
+/* pages/taskModify/taskModify.wxss */
+.task-active{
+  width:90px;
+  font-size:28rpx;
+  padding:0 20rpx;
+}
+.mobile-btn{
+  margin:50rpx 0;
+}
+.task-switch{
+  margin-top:10rpx;
+}
+.task-switch .van-switch{
+ transform: translate(20rpx,10rpx);
+}

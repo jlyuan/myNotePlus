@@ -1,0 +1,59 @@
+page,.container,.container>view{
+  height:100%;
+}
+
+.login-wrap{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+.login-wrap button{
+  width:80%;
+  margin:40rpx 0;
+}
+.register{
+  border: 2rpx solid #dddddd;
+}
+.wel-header{
+  text-align:right;
+}
+.logout{
+  padding:0 20rpx;
+  color:#a99ddd;
+}
+.do-task-wrap{
+  margin-top:60rpx;
+}
+.radio-item{
+  display:inline-block;
+  width:46%;
+  padding:10rpx 0 10rpx 20rpx;
+}
+.sign-btn button{
+  margin:40rpx auto;
+}
+.select-task-tit{
+  font-size:32rpx;
+  padding: 10rpx;
+}
+.list-title{
+  font-size:36rpx;
+  padding:10rpx;
+  border-bottom:2rpx solid #eeeeee;
+}
+.task-item{
+  border-bottom: 2rpx solid #ddd;
+  padding:30rpx 20rpx;
+}
+.task-name-row{
+  color:red;
+}
+.records-list-wrap{
+  padding-bottom:40rpx;
+}
+.add-task-tip{
+  padding:20rpx;
+  text-align:center;
+}

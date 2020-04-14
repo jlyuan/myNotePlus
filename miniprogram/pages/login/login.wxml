@@ -1,0 +1,26 @@
+
+<view class="resetPasswd">
+<navigator url="/pages/resetPasswd/resetPasswd">找回密码</navigator>
+</view>
+<view class="login-wrap">
+
+<van-cell-group>
+  <van-field
+    value="{{ name }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    border="{{ true }}"
+    bind:change="setUserName"
+  />
+    <van-field
+    value="{{ passwd }}"
+    label="密码"
+    placeholder="请输入密码"
+    type="password"
+    border="{{ true }}"
+    bind:change="setUserPasswd"
+  />
+</van-cell-group>
+<button class="login-btn" type="primary" size="default" bindtap="loginHander"> 登录 </button>
+<!-- <button class="resetPasswd-btn"  bindtap="goResetPasswd"> 找回密码 </button> -->
+</view>

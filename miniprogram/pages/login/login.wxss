@@ -1,0 +1,20 @@
+/* pages/login/login.wxss *//* pages/register/register.wxss */
+.resetPasswd navigator{
+  float:right;
+  color:#a99ddd;
+}
+.resetPasswd {
+  height:21px;
+  padding:10rpx;
+}
+.login-wrap{
+  margin-top:100rpx;
+}
+.login-btn{
+  width:80%;
+  margin:80rpx 0;
+}
+.resetPasswd-btn{
+  width:80%;
+  border:2rpx solid #ddd;
+}

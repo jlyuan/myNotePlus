@@ -1,0 +1,106 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wxfa136aa7a8c2758a",
+	"projectname": "myNote",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "resetPasswd",
+					"pathName": "pages/resetPasswd/resetPasswd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "task",
+					"pathName": "pages/task/task",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "taskModify",
+					"pathName": "pages/taskModify/taskModify",
+					"query": "userId=6aebd2215e8894140048e6701998bad8&taskName=python",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "record",
+					"pathName": "pages/record/record",
+					"query": "userId=6aebd2215e8894140048e6701998bad8&taskName=python",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "count",
+					"pathName": "pages/count/count",
+					"query": "userId=6aebd2215e8894140048e6701998bad8&taskName=python",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "userId=6aebd2215e8894140048e6701998bad8&taskName=python",
+					"scene": null
+				}
+			]
+		}
+	}
+}

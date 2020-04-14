@@ -1,0 +1,8 @@
+/* pages/register/register.wxss */
+.register-wrap{
+  margin-top:100rpx;
+}
+.register-btn{
+  width:80%;
+  margin-top:80rpx
+}

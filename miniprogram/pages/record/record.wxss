@@ -1,0 +1,23 @@
+/* pages/record/record.wxss */
+.record-header{
+  margin:40rpx 20rpx 80rpx 20rpx;
+}
+.record-header button{
+  transform: translate(60rpx,20rpx);
+}
+.header-title{
+  font-size:38rpx;
+  padding:10rpx;
+}
+.list-title{
+  font-size:34rpx;
+  padding:10rpx;
+  border-bottom:2rpx solid #eeeeee;
+}
+.task-item{
+  border-bottom: 2rpx solid #ddd;
+  padding:30rpx 20rpx;
+}
+.task-name-row{
+  color:red;
+}
