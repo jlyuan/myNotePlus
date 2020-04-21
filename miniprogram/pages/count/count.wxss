@@ -49,3 +49,14 @@ padding: 0 40rpx;
     width: 98%;
     height: 500rpx;
   }
+  .ok-info{
+    padding-left:30rpx;
+    color:#67c23a
+  }
+  .fail-info{
+    padding-left:40rpx;
+    color:#e6a23c
+  }
+  .dest-time-info{
+    display:flex;
+  }

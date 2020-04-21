@@ -3,6 +3,7 @@ import {
   utils
 } from '../../tools/tool.js'
 const CHARTS = require('../../tools/wxcharts-min.js');
+var dateTime = new Date();
 Page({
 
   /**
@@ -15,8 +16,8 @@ Page({
     selectShowMode: "zxt",
     show: false,
     currentDate: new Date().getTime(),
-    startTimeDates: new Date().getTime(),
-    selectedStartTimeDate: utils.dateFormat('YYYY-mm-dd', new Date()),
+    startTimeDates: new Date().getTime() - 7*24*60*60*1000,
+    selectedStartTimeDate: utils.dateFormat('YYYY-mm-dd', new Date(dateTime.setDate(dateTime.getDate()-7))),
     endTimeDates: new Date().getTime(),
     selectedEndTimeDate: utils.dateFormat('YYYY-mm-dd', new Date()),
     formatter(type, value) {
@@ -30,10 +31,18 @@ Page({
     avgTimes:0,
     lineCategories:[], // 折线图x轴
     lineData:[],// 折线图y轴
+    destTime:0 // 任务每周目标时长
   },
   onChangeTaskId: function (e) {
+    var destTime = 0;
+    this.data.tasks.forEach(item=>{
+      if(item.taskName == e.detail){
+        destTime = item.destTime;
+      }
+    })
     this.setData({
-      selectTaskId: e.detail
+      selectTaskId: e.detail,
+      destTime
     });
   },
   onChangeStartTime: function () {
@@ -74,11 +83,11 @@ Page({
       show: false
     });
   },
-  onChangeTaskId: function (e) {
-    this.setData({
-      selectTaskId: e.detail
-    });
-  },
+  // onChangeTaskId: function (e) {
+  //   this.setData({
+  //     selectTaskId: e.detail
+  //   });
+  // },
   onShowMode: function (e) {
     this.setData({
       selectShowMode: e.detail
@@ -103,8 +112,10 @@ Page({
       });
       if(tasks.length>0){
         this.setData({
-          selectTaskId:tasks[0].taskName
+          selectTaskId:tasks[0].taskName,
+          destTime:tasks[0].destTime || 0
         });
+        this.countFn();
       }
     })
   },
@@ -190,12 +201,7 @@ Page({
         userId: userInfo._id
       });
       this.queryTask();
-      console.log('on show query')
-      // if(this.data.selectShowMode == 'zxt'){
-      //   this.lineShow();
-      // }
     }
-    console.log('on show')
   },
 
   /**

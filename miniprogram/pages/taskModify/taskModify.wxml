@@ -1,6 +1,7 @@
 	<view class="task-form-wrap">
 		<van-cell-group>
 			<van-field disabled value="{{ task.taskName }}" label="任务名称" placeholder="请输入任务名称" border="{{ true }}" bind:change="setTaskName" />
+			<van-field value="{{ task.destTime }}" label="每周目标(分钟)" placeholder="请输入每周目标时长(分钟)" border="{{ true }}" bind:change="setTaskDestTime" />
 			<van-field value="{{ task.taskDesc }}" label="描述" placeholder="请输入任务描述" border="{{ true }}" bind:change="setTaskDesc" />
       <view class="task-switch">
       <text class="task-active">是否有效</text>

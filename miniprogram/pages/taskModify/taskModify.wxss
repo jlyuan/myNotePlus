@@ -1,6 +1,6 @@
 /* pages/taskModify/taskModify.wxss */
 .task-active{
-  width:90px;
+  width:220px;
   font-size:28rpx;
   padding:0 20rpx;
 }
@@ -12,4 +12,8 @@
 }
 .task-switch .van-switch{
  transform: translate(20rpx,10rpx);
+}
+.task-form-wrap .van-cell__title{
+  max-width:220rpx!important;
+  width:220rpx;
 }

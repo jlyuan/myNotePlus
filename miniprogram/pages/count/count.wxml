@@ -36,18 +36,25 @@
 		<button type="primary" bindtap="countFn">统计</button>
 	</view>
 	<view class="show-wrap">
-				<view class="count-title"> 任务 <text> {{selectTaskId}}</text> 统计:</view>
-				<view class="total-wrap">
-					<view>
-						总时长：<text>{{totalTimes}}</text>分钟 = <text>{{totalHourTimes}}</text>小时
-					</view>
-					<view>
-						总次数：<text>{{records.length}}</text> 次
-					</view>
-					<view>
-						平均每天：<text>{{avgTimes}}</text>分钟
-					</view>
-				</view>
+		<view class="count-title"> 任务 <text> {{selectTaskId}}</text> 统计:</view>
+		<view class="total-wrap">
+			<view class="dest-time-info">
+				目标时长：<text>{{destTime}}</text>分钟/周
+				<text>
+					  <text class="ok-info" wx:if="{{destTime < totalTimes }}">very good !</text>
+						<text class="fail-info" wx:else>不达标，需努力</text>
+				</text>
+			</view>
+			<view>
+				总时长：<text>{{totalTimes}}</text>分钟 = <text>{{totalHourTimes}}</text>小时
+			</view>
+			<view>
+				总次数：<text>{{records.length}}</text> 次
+			</view>
+			<view>
+				平均每天：<text>{{avgTimes}}</text>分钟
+			</view>
+		</view>
 		<view wx:if="{{selectShowMode == 'list'}}">
 			<view class="show-list">
 				<view class="task-th">
@@ -67,7 +74,7 @@
 			</view>
 		</view>
 		<view wx:else>
-		<canvas class="canvas" canvas-id="lineGraph"></canvas>
+			<canvas class="canvas" canvas-id="lineGraph"></canvas>
 		</view>
 	</view>
 </view>

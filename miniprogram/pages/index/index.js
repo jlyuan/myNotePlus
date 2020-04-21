@@ -67,7 +67,8 @@ Page({
         console.log(res)
         let tasks = res.result.data || [];
         this.setData({
-          tasks
+          tasks,
+          selectTaskId :tasks.length>0?tasks[0].taskName:""
         })
       })
     },

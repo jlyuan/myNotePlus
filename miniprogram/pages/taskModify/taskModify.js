@@ -34,6 +34,7 @@ Page({
       let data = {
         userId:task.userId,
         taskName:task.taskName,
+        destTime:task.destTime,
         taskDesc:task.taskDesc,
         isActive:task.isActive
       }
@@ -60,6 +61,12 @@ Page({
     },
     setTaskName:function(e){
       this.data.task.taskName = e.detail;
+      this.setData({
+        task:this.data.task
+      })
+    },
+    setTaskDestTime:function(e){
+      this.data.task.destTime = e.detail;
       this.setData({
         task:this.data.task
       })
