@@ -41,7 +41,7 @@
 			<view class="dest-time-info">
 				目标时长：<text>{{destTime}}</text>分钟/周
 				<text>
-					  <text class="ok-info" wx:if="{{destTime < totalTimes }}">very good !</text>
+					  <text class="ok-info" wx:if="{{destTime <= totalTimes }}">very good !</text>
 						<text class="fail-info" wx:else>不达标，需努力</text>
 				</text>
 			</view>

@@ -1,42 +1,49 @@
 <view>
 	<view class="record-header">
-  	<view class="header-title">查询历史记录:</view>
+		<view class="header-title">查询历史记录:</view>
 		<text>日期：{{selectedDate}}</text> <button size="mini" bindtap="selectDate">选择</button>
 	</view>
 	<van-popup position="top" show="{{ show }}" bind:close="onClose">
 		<van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" bind:confirm="onConfirm" bind:cancle="onClose" formatter="{{ formatter }}" />
 	</van-popup>
-  <view>
-  			<view class="task-list">
-				<view class="list-title">{{selectedDate}} 任务记录:</view>
-				<view class="task-item" wx:for="{{records}}" wx:key="_id">
-					<van-row>
-						<van-col span="6">序号:</van-col>
-						<van-col span="18">{{index + 1}}</van-col>
-					</van-row>
-					<view class="h-10"></view>
-					<van-row class="task-name-row">
-						<van-col span="6">任务名称:</van-col>
-						<van-col span="18">
-							{{item.taskName}}</van-col>
-					</van-row>
-					<view class="h-10"></view>
-					<van-row>
-						<van-col span="6">签到时间:</van-col>
-						<van-col span="18">{{item.startTime}}</van-col>
-					</van-row>
-					<view class="h-10"></view>
-					<view class="h-10"></view>
-					<van-row>
-						<van-col span="6">签退时间:</van-col>
-						<van-col span="18">{{item.endTime}}</van-col>
-					</van-row>
-					<view class="h-10"></view>
-					<van-row>
-						<van-col span="6">时长:</van-col>
-						<van-col span="18">{{item.duration}} 分钟</van-col>
-					</van-row>
-				</view>
+	<van-popup position="bottom" show="{{ show2 }}" bind:close="onClose">
+		<van-datetime-picker type="datetime" value="{{ currentDate }}" bind:input="onInput2" bind:confirm="onConfirm2" bind:cancle="onClose" formatter="{{ formatter }}" />
+	</van-popup>
+	<view>
+		<view class="task-list">
+			<view class="list-title">{{selectedDate}} 任务记录:</view>
+			<view class="task-item" wx:for="{{records}}" wx:key="_id">
+				<van-row>
+					<van-col span="6">序号:</van-col>
+					<van-col span="18">{{index + 1}}</van-col>
+				</van-row>
+				<view class="h-10"></view>
+				<van-row class="task-name-row">
+					<van-col span="6">任务名称:</van-col>
+					<van-col span="18">
+						{{item.taskName}}</van-col>
+				</van-row>
+				<view class="h-10"></view>
+				<van-row>
+					<van-col span="6">签到时间:</van-col>
+					<van-col span="18">{{item.startTime}}
+						<van-icon bindtap="modifyTime" data-id="{{item._id}}" name="setting-o" data-type="start" data-startTimes="{{item.startTimes}}" data-endtimes="{{item.endTimes}}" />
+					</van-col>
+				</van-row>
+				<view class="h-10"></view>
+				<view class="h-10"></view>
+				<van-row>
+					<van-col span="6">签退时间:</van-col>
+					<van-col span="18">{{item.endTime}}
+						<van-icon data-endTimes="{{item.endTimes}}" data-id="{{item._id}}" data-type="end" name="setting-o" data-starttimes="{{item.startTimes}}" bindtap="modifyTime" />
+					</van-col>
+				</van-row>
+				<view class="h-10"></view>
+				<van-row>
+					<van-col span="6">时长:</van-col>
+					<van-col span="18">{{item.duration}} 分钟</van-col>
+				</van-row>
 			</view>
-  </view>
+		</view>
+	</view>
 </view>

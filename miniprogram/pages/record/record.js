@@ -15,16 +15,42 @@ Page({
     minDate: new Date().getTime(),
     formatter(type, value) {
       return value;
-    }
+    },
+    show2:false,
+    currentDate2: '',
+    selectedDate2:'',
   },
+  id:"",
+  type:"",
+  times:"",
   onInput(event) {
     this.setData({
       currentDate: event.detail,
       selectedDate:utils.dateFormat('YYYY-mm-dd',new Date(event.detail)),
     });
   },
+  onInput2(event) {
+    this.setData({
+      currentDate2: event.detail,
+      selectedDate2:utils.dateFormat('YYYY-mm-dd',new Date(event.detail)),
+    });
+  },
   selectDate(){
     this.setData({ show: true });
+  },
+  modifyTime(event){
+  
+    console.log(event.target.dataset)
+    this.id = event.target.dataset.id;
+    this.type = event.target.dataset.type;
+    if(event.target.dataset.type == 'start'){
+      this.setData({ currentDate2: event.target.dataset.starttimes });
+      this.times = event.target.dataset.endtimes;
+    }else{
+      this.setData({ currentDate2: event.target.dataset.endtimes });
+      this.times = event.target.dataset.starttimes;
+    }
+    this.setData({ show2: true });
   },
       // 查询记录
       queryRecords:function(){
@@ -78,11 +104,54 @@ Page({
     }
   },
   onClose() {
-    this.setData({ show: false });
+    this.setData({ show: false,show2: false });
   },
   onConfirm:function(){
     this.setData({ show: false });
     this.queryRecords();
+  },
+  onConfirm2:function(){
+    this.setData({ show2: false });
+    var strdate = utils.dateFormat('YYYY-mm-dd HH:MM:SS',new Date(this.data.currentDate2));
+    console.log(this.data.currentDate2,strdate)
+    var data = {
+      _id:this.id
+    }
+    data.data = {}
+    if(this.type == "start"){
+      data.data.startTimes = this.data.currentDate2;
+      data.data.startTime = strdate;
+      data.data.duration = Math.ceil((this.times - data.data.startTimes)/60000);
+    }else{
+      data.data.endTimes = this.data.currentDate2;
+      data.data.endTime = strdate;
+      data.data.duration = Math.ceil((data.data.endTimes- this.times)/60000);
+    }
+    if(data.data.duration<0){
+      wx.showToast({
+        icon:"none",
+        title: '选择时间有误',
+      });
+      return 0;
+    }
+   
+    // console.log(data);
+    wx.showLoading();
+    wx.cloud.callFunction({name:"noteRecordsModify",data:data}).then(resp=>{
+      wx.hideLoading();
+      let res = resp.result || {};
+      if(res.success){
+        wx.showToast({
+          title: '修改ok',
+        });
+        this.queryRecords();
+      }else{
+        wx.showToast({
+          icon:"none",
+          title: '修改失败',
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面隐藏

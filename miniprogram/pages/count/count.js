@@ -16,8 +16,8 @@ Page({
     selectShowMode: "zxt",
     show: false,
     currentDate: new Date().getTime(),
-    startTimeDates: new Date().getTime() - 7*24*60*60*1000,
-    selectedStartTimeDate: utils.dateFormat('YYYY-mm-dd', new Date(dateTime.setDate(dateTime.getDate()-7))),
+    startTimeDates: new Date().getTime() - 6*24*60*60*1000,
+    selectedStartTimeDate: utils.dateFormat('YYYY-mm-dd', new Date(dateTime.setDate(dateTime.getDate()-6))),
     endTimeDates: new Date().getTime(),
     selectedEndTimeDate: utils.dateFormat('YYYY-mm-dd', new Date()),
     formatter(type, value) {
