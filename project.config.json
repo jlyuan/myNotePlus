@@ -99,6 +99,19 @@
 					"pathName": "pages/test/test",
 					"query": "userId=6aebd2215e8894140048e6701998bad8&taskName=python",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/other/other",
+					"pathName": "pages/other/other",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myWeiXin/myWeiXin",
+					"pathName": "pages/myWeiXin/myWeiXin",
+					"scene": null
 				}
 			]
 		}

@@ -45,5 +45,8 @@
 				</van-row>
 			</view>
 		</view>
+		<view wx:if="{{records.length == 0}}">
+			<view class="no-record-tip">没有记录！</view>
+		</view>
 	</view>
 </view>

@@ -1,0 +1,5 @@
+<view class="wx-wrap">
+  <image class="avator" src="{{avator}}"></image>
+  <view class="name">{{name}}</view>
+  <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击获取微信头像和名称</button>
+</view>

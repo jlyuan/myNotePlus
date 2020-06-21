@@ -21,3 +21,9 @@
 .task-name-row{
   color:red;
 }
+.no-record-tip{
+  text-align: center;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+}

@@ -1,0 +1,21 @@
+<view class="other-wrap">
+	<view class="menu-item">
+		<navigator class="nav" url="/pages/record/record">
+			<text class="txt">任务记录</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
+	<view class="bgc-10"></view>
+	<view class="menu-item">
+		<navigator class="nav bdr-bottom" url="/pages/myWeiXin/myWeiXin">
+			<text class="txt">我的微信</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
+  	<view class="menu-item">
+		<navigator class="nav" url="/pages/record/record">
+			<text class="txt">任务记录</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
+</view>

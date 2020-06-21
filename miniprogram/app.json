@@ -9,36 +9,37 @@
     "pages/record/record",
     "pages/login/login",
     "pages/register/register",
-    "pages/resetPasswd/resetPasswd"
+    "pages/resetPasswd/resetPasswd",
+    "pages/other/other",
+    "pages/myWeiXin/myWeiXin"
   ],
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "./images/icon/home.png",
-      "selectedIconPath": "./images/icon/home.png"
-    },
-    {
-      "pagePath": "pages/count/count",
-      "text": "统计",
-      "iconPath": "./images/icon/count.png",
-      "selectedIconPath": "./images/icon/count.png"
-    }
-    ,
-    {
-      "pagePath": "pages/task/task",
-      "text": "任务",
-      "iconPath": "./images/icon/task.png",
-      "selectedIconPath": "./images/icon/task.png"
-    }
-    ,
-    {
-      "pagePath": "pages/record/record",
-      "text": "记录",
-      "iconPath": "./images/icon/record.png",
-      "selectedIconPath": "./images/icon/record.png"
-    }
-  ]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/icon/home.png",
+        "selectedIconPath": "./images/icon/home.png"
+      },
+      {
+        "pagePath": "pages/count/count",
+        "text": "统计",
+        "iconPath": "./images/icon/count.png",
+        "selectedIconPath": "./images/icon/count.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "./images/icon/task.png",
+        "selectedIconPath": "./images/icon/task.png"
+      },
+      {
+        "pagePath": "pages/other/other",
+        "text": "其他",
+        "iconPath": "./images/icon/record.png",
+        "selectedIconPath": "./images/icon/record.png"
+      }
+    ]
   },
   "window": {
     "backgroundColor": "#F6F6F6",

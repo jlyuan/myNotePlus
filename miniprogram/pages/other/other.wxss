@@ -1,0 +1,23 @@
+/* miniprogram/pages/other/other.wxss */
+.other-wrap{
+  background-color: #eeeeee;
+  height:100vh;
+}
+.menu-item{
+  padding:10rpx 30rpx;
+  font-size:40rpx;
+  color:rgb(50, 50, 51);
+  background-color: #ffffff;
+}
+.bgc-10{
+  height:10rpx;
+  background-color:#eeeeee;
+}
+.nav{
+  display:flex;
+  justify-content: space-between;
+  padding:10rpx;
+}
+.bdr-bottom{
+  border-bottom: 2rpx solid #eeeeee;
+}

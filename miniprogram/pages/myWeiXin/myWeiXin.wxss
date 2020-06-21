@@ -1,0 +1,21 @@
+/* miniprogram/pages/myWeiXin/myWeiXin.wxss */
+.wx-wrap{
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.avator{
+  width:380rpx;
+  border-radius:50%;
+  border:2rpx solid #eeeeee;
+}
+.btn{
+  width:80%!important;
+  text-align: center;
+  color:rgb(50, 50, 51);
+}
+.name{
+  color: red;
+}
