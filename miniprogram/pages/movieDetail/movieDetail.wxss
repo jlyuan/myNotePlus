@@ -1,0 +1,26 @@
+/* pages/movieDetail/movieDetail.wxss */
+.movie-detail{
+  padding:20rpx;
+}
+.name{
+  font-size:40rpx;
+  line-height:60rpx;
+}
+.star-item{
+  line-height:40rpx;
+}
+.rating-num{
+  margin-left:20rpx;
+}
+.left{
+  font-size:28rpx;
+}
+.img{
+  text-align:center;
+  padding:20rpx;
+}
+.rating-item{
+  text-indent:24rpx;
+  font-size:28rpx;
+  line-height:38rpx;
+}

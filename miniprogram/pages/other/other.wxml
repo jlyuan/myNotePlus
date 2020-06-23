@@ -13,8 +13,8 @@
 		</navigator>
 	</view>
   	<view class="menu-item">
-		<navigator class="nav" url="/pages/record/record">
-			<text class="txt">任务记录</text>
+		<navigator class="nav" url="/pages/dbmovie/dbmovie">
+			<text class="txt">热门电影</text>
 			<van-icon name="arrow" />
 		</navigator>
 	</view>

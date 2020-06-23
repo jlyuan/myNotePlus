@@ -1,0 +1,23 @@
+ 
+<view class="container">
+<view class="section">
+  <view class="title">热门推荐</view>
+  <view class="move-item" wx:for="{{movies}}" wx:key="{{index}}">
+  <image src="{{item.pic.normal}}" class="move-img" bindtap="clickToMovieDetail" id="movie" data-movie="{{item}}"></image>
+  <view class="right">
+        <view class="movie-tit"><text>{{item.title}}</text></view>
+        <view class="star-item">
+            <view class="star">
+              <view class="star-after">☆☆☆☆☆</view>
+              <view class="star-before" style="width:{{item.rating.value*10}}%">☆☆☆☆☆</view>
+            </view>
+            <text class="star-val">{{item.rating.value}}</text>
+        </view>
+        <view class="movie-info">{{item.card_subtitle}}</view>
+
+  </view>
+
+  </view>
+</view>
+</view>
+

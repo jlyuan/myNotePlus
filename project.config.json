@@ -111,6 +111,13 @@
 					"id": -1,
 					"name": "pages/myWeiXin/myWeiXin",
 					"pathName": "pages/myWeiXin/myWeiXin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "dbmovie",
+					"pathName": "pages/dbmovie/dbmovie",
 					"scene": null
 				}
 			]

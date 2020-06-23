@@ -11,7 +11,9 @@
     "pages/register/register",
     "pages/resetPasswd/resetPasswd",
     "pages/other/other",
-    "pages/myWeiXin/myWeiXin"
+    "pages/myWeiXin/myWeiXin",
+    "pages/dbmovie/dbmovie",
+    "pages/movieDetail/movieDetail"
   ],
   "tabBar": {
     "list": [

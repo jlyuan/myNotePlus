@@ -1,0 +1,44 @@
+ 
+.section{
+  display:flex;
+  padding:10rpx;
+  flex-wrap: wrap;
+}
+.title{
+  width:100%;
+  margin-bottom:20rpx;
+}
+.move-item{
+  display:flex;
+  align-items:center;
+  margin-bottom:32rpx;
+}
+.move-img{
+    width:260rpx;
+    height:240rpx;
+}
+.right{
+  flex:1;
+  padding:4rpx 32rpx;
+}
+.movie-tit{
+  font-size:32rpx;
+  line-height:36rpx;
+  /* overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;  */
+  padding-bottom:10rpx;
+}
+.movie-info{
+  padding-top:10rpx;
+  font-size:28rpx;
+  line-height:32rpx;
+  color: #191919;
+}
+.star-item{
+  display:flex;
+  font-size:26rpx;
+}
+.star-val{
+  margin-left:12rpx;
+}

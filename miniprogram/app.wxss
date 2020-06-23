@@ -4,3 +4,16 @@
 .h-20{
   height:20rpx;
 }
+.star{
+  position:relative;
+  display:inline-block;
+}
+.star-after{
+  color:#ccc;
+}
+.star-before{
+  position:absolute;
+  left:0;top:0;
+color:#feb211;
+overflow:hidden;
+}

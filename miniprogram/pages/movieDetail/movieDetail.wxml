@@ -1,0 +1,30 @@
+<!--pages/movieDetail/movieDetail.wxml-->
+<view class="movie-detail">
+	<view class="name">
+		{{currentMovieData.movie.title}}
+	</view>
+	<view class="type">
+		<view class="left">
+			<view class="star-item">
+				<view class="star">
+					<view class="star-after">☆☆☆☆☆</view>
+					<view class="star-before" style="width:{{currentMovieData.movie.rating.value*10}}%">☆☆☆☆☆</view>
+				</view>
+				<text class="star-val">{{currentMovieData.movie.rating.value}}</text>
+				<text class="rating-num">{{currentMovieData.movie.rating.count}}人评价</text>
+			</view>
+			<view class="desc">
+				{{currentMovieData.movie.card_subtitle}}
+			</view>
+		</view>
+		<view class="img">
+			<image src="{{currentMovieData.movie.pic.large}}"></image>
+		</view>
+	</view>
+	<view class="rating">
+		<view class="rating-item" wx:for="{{currentMovieData.movie.comments}}" wx:key="{{index}}">
+			{{item.comment}}
+		</view>
+
+	</view>
+</view>
