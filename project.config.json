@@ -118,6 +118,13 @@
 					"id": -1,
 					"name": "dbmovie",
 					"pathName": "pages/dbmovie/dbmovie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mySpace/mySpace",
+					"pathName": "pages/mySpace/mySpace",
 					"scene": null
 				}
 			]

@@ -13,7 +13,8 @@
     "pages/other/other",
     "pages/myWeiXin/myWeiXin",
     "pages/dbmovie/dbmovie",
-    "pages/movieDetail/movieDetail"
+    "pages/movieDetail/movieDetail",
+    "pages/mySpace/mySpace"
   ],
   "tabBar": {
     "list": [

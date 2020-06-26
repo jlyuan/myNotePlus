@@ -6,6 +6,12 @@
 		</navigator>
 	</view>
 	<view class="bgc-10"></view>
+				<view class="menu-item">
+		<navigator class="nav bdr-bottom" url="/pages/mySpace/mySpace">
+			<text class="txt">我的空间</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
 	<view class="menu-item">
 		<navigator class="nav bdr-bottom" url="/pages/myWeiXin/myWeiXin">
 			<text class="txt">我的微信</text>

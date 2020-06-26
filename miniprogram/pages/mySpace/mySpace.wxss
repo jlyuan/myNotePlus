@@ -1,0 +1,37 @@
+/* miniprogram/pages/mySpace/mySpace.wxss */
+.space-wrap{
+  padding:20rpx;
+}
+.form-wrap{
+  width:100%;
+}
+.area{
+  width:100%;
+  border:2rpx solid #eee6dd;
+  padding:10rpx;
+  box-sizing: border-box;
+}
+.submit-btn{
+  margin:20rpx 0 40rpx 0;
+}
+.space-item{
+  border-bottom:2rpx solid #eeeeee;
+  padding:50rpx 10rpx 62rpx 10rpx;
+}
+.txt{
+  word-wrap: break-word;
+  word-break: normal;
+  padding-bottom:10rpx;
+}
+.w-40{
+  width:40rpx;
+}
+.time{
+  float:right;
+  right:30rpx;
+  color:#424141;
+}
+.no-say{
+  text-align: center;
+  padding:20rpx 0;
+}
