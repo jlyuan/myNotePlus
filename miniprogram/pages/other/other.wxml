@@ -6,12 +6,6 @@
 		</navigator>
 	</view>
 	<view class="bgc-10"></view>
-				<view class="menu-item">
-		<navigator class="nav bdr-bottom" url="/pages/mySpace/mySpace">
-			<text class="txt">我的日记</text>
-			<van-icon name="arrow" />
-		</navigator>
-	</view>
 	<view class="menu-item">
 		<navigator class="nav bdr-bottom" url="/pages/myWeiXin/myWeiXin">
 			<text class="txt">我的微信</text>
@@ -21,6 +15,13 @@
   	<view class="menu-item">
 		<navigator class="nav" url="/pages/dbmovie/dbmovie">
 			<text class="txt">热门电影</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
+		<view class="bgc-10"></view>
+				<view class="menu-item">
+		<navigator class="nav" url="/pages/mySpace/mySpace">
+			<text class="txt">用户反馈</text>
 			<van-icon name="arrow" />
 		</navigator>
 	</view>
