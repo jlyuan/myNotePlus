@@ -64,6 +64,18 @@ Page({
     if(!content){
       return 0;
     }
+    if(!this.data.userId){
+      wx.switchTab({
+        url: '/pages/index/index',
+      })
+      setTimeout(function(){
+        wx.showToast({
+          icon:"none",
+          title:'请先登录'
+        })
+      },2000)
+      return 0
+    }
     var nowDate = new Date();
     let data = {
       userId:this.data.userId,
