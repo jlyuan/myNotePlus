@@ -1,7 +1,7 @@
 <view class="space-wrap">
 	<form bindsubmit="bindFormSubmit" class="form-wrap">
-		<textarea value="{{content}}" placeholder="说点什么呢......" name="textarea" class="area" />
-		<button form-type="submit" class="submit-btn"> 发表 </button>
+		<textarea value="{{content}}" placeholder="请在这里输入日记内容......" name="textarea" class="area" />
+		<button form-type="submit" class="submit-btn"> 添加日记 </button>
   </form>
   <view class="space-data-wrap">
     <view class="space-item" wx:for="{{spaceDatas}}" wx:key="id">
@@ -12,7 +12,7 @@
         <view class="time">{{item.time}}</view>
     </view>
     <view wx:if="{{spaceDatas.length == 0}}">
-      <view class="no-say">暂无说说,请发表！</view>
+      <view class="no-say">暂无日记,请添加！</view>
     </view>
     <view wx:if="{{hasMore}}">
         <view class="no-say">没有更多了！</view>

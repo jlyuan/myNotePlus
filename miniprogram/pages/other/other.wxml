@@ -8,7 +8,7 @@
 	<view class="bgc-10"></view>
 				<view class="menu-item">
 		<navigator class="nav bdr-bottom" url="/pages/mySpace/mySpace">
-			<text class="txt">我的空间</text>
+			<text class="txt">我的日记</text>
 			<van-icon name="arrow" />
 		</navigator>
 	</view>
