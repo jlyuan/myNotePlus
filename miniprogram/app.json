@@ -14,6 +14,7 @@
     "pages/myWeiXin/myWeiXin",
     "pages/dbmovie/dbmovie",
     "pages/movieDetail/movieDetail",
+    "pages/instructions/instructions",
     "pages/mySpace/mySpace"
   ],
   "tabBar": {
@@ -48,7 +49,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "myNote",
+    "navigationBarTitleText": "myNotePlus",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

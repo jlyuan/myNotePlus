@@ -125,6 +125,13 @@
 					"id": -1,
 					"name": "pages/mySpace/mySpace",
 					"pathName": "pages/mySpace/mySpace",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/instructions/instructions",
+					"pathName": "pages/instructions/instructions",
 					"scene": null
 				}
 			]

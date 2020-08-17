@@ -20,8 +20,14 @@
 	</view>
 		<view class="bgc-10"></view>
 				<view class="menu-item">
-		<navigator class="nav" url="/pages/mySpace/mySpace">
+		<navigator class="nav bdr-bottom" url="/pages/mySpace/mySpace">
 			<text class="txt">用户反馈</text>
+			<van-icon name="arrow" />
+		</navigator>
+	</view>
+					<view class="menu-item">
+		<navigator class="nav" url="/pages/instructions/instructions">
+			<text class="txt">使用说明</text>
 			<van-icon name="arrow" />
 		</navigator>
 	</view>

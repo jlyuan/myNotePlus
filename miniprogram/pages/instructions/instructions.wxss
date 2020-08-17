@@ -1,0 +1,17 @@
+/* pages/instructions/instructions.wxss */
+.instr-con{
+  padding:20rpx;
+  font-size:30rpx;
+}
+.title{
+  font-size:34rpx;
+}
+.info{
+  font-size:32rpx;
+  text-indent: 40rpx;
+  padding:16rpx;
+}
+.item{
+  text-indent: 40rpx;
+  padding:10rpx;
+}
