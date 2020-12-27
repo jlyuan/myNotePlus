@@ -32,6 +32,8 @@ Page({
       });
       this.queryTask();
       this.queryTodayRecords();
+    }else{
+      this.loginFn()
     }
   },
   onShow:function(){
@@ -44,7 +46,36 @@ Page({
       });
       this.queryTask();
       this.queryTodayRecords();
+    }else{
+      this.loginFn()
     }
+  },
+  loginFn(){
+      // 默认 test用户登录
+      let user = {
+        name:'test',
+        passwd:'123456',
+      }
+      wx.cloud.callFunction({
+        name:"noteLogin",
+        data:user
+      }).then(resp=>{
+        let res = resp.result;
+        if(res.success){
+          //缓存用户信息
+          let userData = res.data[0];
+          wx.setStorage({
+            data: {
+              name:userData.name,
+              mobile:userData.mobile,
+              _id:userData._id
+            },
+            key: 'userInfo',
+          })
+          app.globalData.userId = userData._id;
+          app.globalData.userName = userData.name;
+        }
+      })
   },
   logoutFn:function(){
     wx.clearStorage();
