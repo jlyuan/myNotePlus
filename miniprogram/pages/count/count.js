@@ -162,6 +162,9 @@ Page({
         })
         avgTimes = Math.ceil(totalTimes / records.length);
         totalHourTimes = (totalTimes / 60).toFixed(2)
+      }else{
+        lineCategories = [0];
+        lineData = [0];
       }
 
       this.setData({
